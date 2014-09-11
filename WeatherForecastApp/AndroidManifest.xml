@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.weatherforecastapp"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="19" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.weatherforecastapp.CityListActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.weatherforecastapp.CityDetailActivity"
+            android:label="@string/title_city_detail"
+            android:parentActivityName="com.example.weatherforecastapp.CityListActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.weatherforecastapp.CityListActivity" />
+        </activity>
+        <activity
+            android:name="com.example.weatherforecastapp.AddCityActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.example.weatherforecastapp.DeleteCityActivity"
+            android:label="@string/app_name" >
+        </activity>
+    </application>
+
+</manifest>
